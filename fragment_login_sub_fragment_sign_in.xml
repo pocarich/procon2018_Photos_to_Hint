@@ -1,0 +1,175 @@
+﻿<!-- LoginSubFragmentSignInレイアウトファイル -->
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="jp.androidbook.photostohint.LoginSubFragmentSignIn">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- ヘッダ表示用レイアウト -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3">
+
+            <!-- 背景表示 -->
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/ui_bar_back2" />
+
+            <!-- モード名テキスト表示 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="ログイン"
+                android:textColor="@android:color/white"
+                android:textSize="24sp" />
+
+        </FrameLayout>
+
+        <!-- メイン画面表示用レイアウト -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="30">
+
+            <!-- 通信画面表示用レイアウト -->
+            <FrameLayout
+                android:id="@+id/login_sub_fragment_download_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <!-- 通信中クルクル表示 -->
+                <ProgressBar
+                    style="@style/Base.Widget.AppCompat.ProgressBar"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"/>
+
+            </FrameLayout>
+
+            <!-- 通信失敗画面表示用レイアウト -->
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/login_sub_fragment_connection_failure_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <!-- 通信再試行ボタン表示 -->
+                <Button
+                    android:id="@+id/login_sub_fragment_connection_failure_button"
+                    android:layout_width="216dp"
+                    android:layout_height="74dp"
+                    android:layout_marginBottom="100dp"
+                    android:layout_marginEnd="50dp"
+                    android:layout_marginStart="50dp"
+                    android:background="@drawable/button0"
+                    android:text="再試行"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="24sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <!-- 通信失敗テキスト表示 -->
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="277dp"
+                    android:layout_height="168dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="100dp"
+                    android:text="通信に失敗しました。"
+                    android:textAlignment="center"
+                    android:textSize="24sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </android.support.constraint.ConstraintLayout>
+
+            <!-- メインコンテンツ画面表示用レイアウト -->
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/login_sub_fragment_sign_in_form_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginBottom="20dp">
+
+                <!-- ID入力テキストボックス表示 -->
+                <EditText
+                    android:id="@+id/login_sub_fragment_sign_in_id_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp"
+                    android:hint="ID入力"
+                    android:textSize="20sp"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textColorHint="@color/hintColor"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <!-- パスワード入力テキストボックス表示 -->
+                <EditText
+                    android:id="@+id/login_sub_fragment_sign_in_password_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp"
+                    android:hint="パスワード入力"
+                    android:inputType="textPassword"
+                    android:textSize="20sp"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textColorHint="@color/hintColor"
+                    app:layout_constraintTop_toBottomOf="@+id/login_sub_fragment_sign_in_id_text"/>
+
+                <!-- ログインボタン表示 -->
+                <Button
+                    android:id="@+id/login_sub_fragment_sign_in_login_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="10dp"
+                    android:text="ログイン"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="24sp"
+                    android:background="@drawable/button2"
+                    app:layout_constraintTop_toBottomOf="@+id/login_sub_fragment_sign_in_password_text"/>
+
+                <!-- 新規登録ボタン表示 -->
+                <Button
+                    android:id="@+id/login_sub_fragment_sign_in_signup_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:text="新規登録"
+                    android:textSize="24sp"
+                    android:textColor="@color/colorWhite"
+                    android:background="@drawable/button3"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+            </android.support.constraint.ConstraintLayout>
+ 
+            <!-- ヘッダ下部影表示 -->
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/ui_shader" />
+
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+
+</FrameLayout>

@@ -1,0 +1,114 @@
+﻿<!-- TourismInformationSubFragment2レイアウトファイル -->
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="jp.androidbook.photostohint.TourismInformationSubFragment2">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- ヘッダ表示用レイアウト -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3">
+
+            <!-- 背景表示 -->
+            <ImageView
+                android:src="@drawable/ui_bar_back2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"/>
+
+            <!-- シーン名テキスト表示 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="インフォメーション"
+                android:textColor="@android:color/white"
+                android:textSize="24sp" />
+
+            <!-- 戻るボタン表示 -->
+            <ImageButton
+                android:id="@+id/tourism_open_data_sub_fragment2_backButton"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="4dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="4dp"
+                android:background="@null"
+                android:layout_gravity="left"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/back_button0" />
+
+        </FrameLayout>
+
+        <!-- メイン画面表示用レイアウト -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="27">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <!-- タイトルテキスト表示 -->
+                    <TextView
+                        android:id="@+id/tourism_open_data_sub_fragment2_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="10dp"
+                        android:singleLine="true"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <!-- 境界線表示 -->
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:src="@drawable/ui_underline"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="5dp"
+                        android:scaleType="fitXY"/>
+
+                    <!-- 詳細文テキスト表示 -->
+                    <TextView
+                        android:id="@+id/tourism_open_data_sub_fragment2_sentence"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="5dp"
+                        android:textSize="14sp"/>
+
+                </LinearLayout>
+
+            </ScrollView>
+
+            <!-- ヘッダ下部影表示 -->
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/ui_shader" />
+        </FrameLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

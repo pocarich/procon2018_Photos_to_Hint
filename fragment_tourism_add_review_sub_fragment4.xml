@@ -1,0 +1,149 @@
+﻿<!-- TourismAddReviewSubFragment4レイアウトファイル -->
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="jp.androidbook.photostohint.TourismAddReviewSubFragment4">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- ヘッダ表示用レイアウト -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3">
+
+            <!-- 背景表示 -->
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/ui_bar_back2" />
+
+            <!-- シーン名テキスト表示 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="口コミ投稿"
+                android:textColor="@android:color/white"
+                android:textSize="24sp" />
+
+        </FrameLayout>
+
+        <!-- メイン画面表示用レイアウト -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="27">
+
+            <!-- 通信画面表示用レイアウト -->
+            <FrameLayout
+                android:id="@+id/tourism_add_review_sub_fragment4_connection_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <!-- 通信中クルクル表示 -->
+                <ProgressBar
+                    style="@style/Base.Widget.AppCompat.ProgressBar"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"/>
+
+            </FrameLayout>
+
+            <!-- 通信失敗画面表示用レイアウト -->
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/tourism_add_review_sub_fragment4_connection_failure_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <!-- 通信再試行ボタン表示 -->
+                <Button
+                    android:id="@+id/tourism_add_review_sub_fragment4_connection_failure_button"
+                    android:layout_width="216dp"
+                    android:layout_height="74dp"
+                    android:layout_marginBottom="100dp"
+                    android:layout_marginEnd="50dp"
+                    android:layout_marginStart="50dp"
+                    android:background="@drawable/button0"
+                    android:text="再試行"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="24sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <!-- 通信失敗テキスト表示 -->
+                <TextView
+                    android:layout_width="277dp"
+                    android:layout_height="168dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="100dp"
+                    android:text="通信に失敗しました。"
+                    android:textAlignment="center"
+                    android:textSize="24sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </android.support.constraint.ConstraintLayout>
+
+            <!-- メインコンテンツ画面表示用レイアウト -->
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/tourism_add_review_sub_fragment4_main_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+ 
+                <!-- テキスト表示 -->
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="0dp"
+                    android:layout_height="138dp"
+                    android:layout_marginEnd="70dp"
+                    android:layout_marginStart="70dp"
+                    android:layout_marginTop="100dp"
+                    android:text="口コミの投稿が完了しました！"
+                    android:textAlignment="center"
+                    android:textSize="30sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <!-- 決定ボタン表示 -->
+                <Button
+                    android:id="@+id/tourism_add_review_sub_fragment4_confirmation_button"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginEnd="100dp"
+                    android:layout_marginStart="100dp"
+                    android:layout_marginTop="300dp"
+                    android:background="@drawable/button0"
+                    android:text="OK"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="24sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </android.support.constraint.ConstraintLayout>
+
+            <!-- ヘッダ下部影表示 -->
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/ui_shader" />
+
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+
+</FrameLayout>

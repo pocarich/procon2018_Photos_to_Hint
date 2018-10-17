@@ -1,0 +1,113 @@
+﻿<!-- SettingsSubFragmentレイアウトファイル -->
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="jp.androidbook.photostohint.SettingsSubFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- ヘッダ表示用レイアウト -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3">
+
+            <!-- 背景表示 -->
+            <ImageView
+                android:src="@drawable/ui_bar_back2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"/>
+
+            <!-- シーン名テキスト表示 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="設定"
+                android:textColor="@android:color/white"
+                android:textSize="24sp" />
+
+        </FrameLayout>
+
+        <!-- メイン画面表示用レイアウト -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="27">
+
+            <FrameLayout
+                android:id="@+id/settings_sub_fragment_main_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <!-- アカウント情報ボタン表示 -->
+                        <Button
+                            android:id="@+id/settings_sub_fragment_account_button"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:paddingLeft="15dp"
+                            android:paddingRight="15dp"
+                            android:background="@drawable/ui_message_box0"
+                            android:ellipsize="end"
+                            android:scrollHorizontally="true"
+                            android:singleLine="true"
+                            android:gravity="center"
+                            android:textSize="18sp"
+                            android:text="アカウント情報"/>
+
+                        <!-- ライセンスボタン表示 -->
+                        <Button
+                            android:id="@+id/settings_sub_fragment_license_button"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:paddingLeft="15dp"
+                            android:paddingRight="15dp"
+                            android:background="@drawable/ui_message_box0"
+                            android:ellipsize="end"
+                            android:scrollHorizontally="true"
+                            android:singleLine="true"
+                            android:gravity="center"
+                            android:textSize="18sp"
+                            android:text="ライセンス"/>
+
+                    </LinearLayout>
+
+                </ScrollView>
+
+            </FrameLayout>
+
+            <!-- ヘッダ下部影表示 -->
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/ui_shader" />
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+
+</FrameLayout>

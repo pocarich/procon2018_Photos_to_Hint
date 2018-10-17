@@ -1,0 +1,162 @@
+﻿<!-- 吹き出し詳細ウィンドウレイアウトファイル -->
+
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 背景表示用レイアウト -->
+    <FrameLayout
+        android:layout_width="300dp"
+        android:layout_height="400dp">
+
+        <!-- 背景表示 -->
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/balloon_window_back5" />
+    </FrameLayout>
+
+    <!-- メインコンテンツ表示用レイアウト -->
+    <FrameLayout
+        android:layout_width="300dp"
+        android:layout_height="400dp"
+        android:paddingBottom="15dp"
+        android:paddingTop="5dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!-- タイトルテキスト表示 -->
+            <TextView
+                android:id="@+id/tourism_map_info_window_title"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="16sp"/>
+
+            <!-- 画像表示 -->
+            <ImageView
+                android:id="@+id/tourism_map_info_window_image"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:scaleType="fitXY"/>
+
+            <!-- 説明テキスト表示 -->
+            <TextView
+                android:id="@+id/tourism_map_info_window_description"
+                android:layout_width="match_parent"
+                android:paddingTop="4dp"
+                android:paddingRight="5dp"
+                android:paddingLeft="5dp"
+                android:layout_height="90dp"
+                android:textSize="16sp"/>
+
+            <!-- テキスト表示 -->
+            <TextView
+                android:id="@+id/tourism_map_info_window_review_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="レビュー"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+
+            <!-- レビュー表示用レイアウト -->
+            <LinearLayout
+                android:id="@+id/tourism_map_info_window_review_layout0"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:orientation="horizontal">
+
+                <!-- 顔アイコン表示 -->
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/review_icon"
+                    android:scaleType="fitXY"/>
+
+                <!-- レビューテキスト表示 -->
+                <TextView
+                    android:id="@+id/tourism_map_info_window_review_text0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:maxLines="1"
+                    android:scrollHorizontally="true"
+                    android:ellipsize="end"
+                    android:textSize="14sp"
+                    android:textColor="@color/colorOrange"
+                    android:layout_gravity="center_vertical"/>
+            </LinearLayout>
+
+            <!-- レビュー表示用レイアウト2 -->
+            <LinearLayout
+                android:id="@+id/tourism_map_info_window_review_layout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- 顔アイコン表示 -->
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/review_icon"
+                    android:scaleType="fitXY"/>
+
+                <!-- レビューテキスト表示 -->
+                <TextView
+                    android:id="@+id/tourism_map_info_window_review_text1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:maxLines="1"
+                    android:scrollHorizontally="true"
+                    android:ellipsize="end"
+                    android:textSize="14sp"
+                    android:textColor="@color/colorOrange"
+                    android:layout_gravity="center_vertical"/>
+            </LinearLayout>
+
+            <!-- レビュー表示用レイアウト3 -->
+            <LinearLayout
+                android:id="@+id/tourism_map_info_window_review_layout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- 顔アイコン表示 -->
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/review_icon"
+                    android:scaleType="fitXY"/>
+
+                <!-- レビューテキスト表示 -->
+                <TextView
+                    android:id="@+id/tourism_map_info_window_review_text2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:maxLines="1"
+                    android:scrollHorizontally="true"
+                    android:ellipsize="end"
+                    android:textSize="14sp"
+                    android:textColor="@color/colorOrange"
+                    android:layout_gravity="center_vertical"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </FrameLayout>
+
+</FrameLayout>

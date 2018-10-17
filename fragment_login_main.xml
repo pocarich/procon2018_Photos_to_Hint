@@ -1,0 +1,17 @@
+﻿<!-- LoginMainFragmentレイアウトファイル -->
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="jp.androidbook.photostohint.LoginMainFragment">
+
+    //ログイン画面表示用レイアウト
+    <FrameLayout
+        android:id="@+id/login_main_fragment_fragment_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </FrameLayout>
+
+</FrameLayout>

@@ -1,0 +1,219 @@
+﻿<!-- SearchMapSubFragmentレイアウトファイル -->
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="jp.androidbook.photostohint.SearchMapSubFragment">
+
+    <!-- マップ表示用レイアウト -->
+    <FrameLayout
+        android:id="@+id/search_map_sub_fragment_frameLayout0"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/search_map_sub_fragment_frameLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!-- ヘッダ表示用レイアウト -->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3">
+
+                <!-- 背景表示 -->
+                <ImageView
+                    android:src="@drawable/ui_bar_back"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <FrameLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="4"
+                        android:layout_height="match_parent">
+
+                        <!-- 地域名背景表示 -->
+                        <ImageView
+                            android:src="@drawable/map_region_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="fitXY"
+                            android:paddingLeft="4dp"
+                            android:paddingRight="4dp"
+                            android:paddingTop="4dp"
+                            android:paddingBottom="4dp"/>
+
+                        <!-- 地域名テキスト表示 -->
+                        <TextView
+                            android:id="@+id/search_map_sub_fragment_location_name_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="24sp" />
+
+                    </FrameLayout>
+
+                    <!-- お題スポット写真表示切り替えボタン表示 -->
+                    <ImageButton
+                        android:id="@+id/search_map_sub_fragment_disp_theme_image_button"
+                        android:src="@drawable/button_photo"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:paddingLeft="4dp"
+                        android:paddingRight="4dp"
+                        android:paddingTop="4dp"
+                        android:paddingBottom="4dp"
+                        android:scaleType="fitCenter"
+                        android:background="@null" />
+
+                    <!-- ヒントボタン表示 -->
+                    <ImageButton
+                        android:id="@+id/search_map_sub_fragment_hint_button"
+                        android:src="@drawable/button_hint"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:paddingLeft="4dp"
+                        android:paddingRight="4dp"
+                        android:paddingTop="4dp"
+                        android:paddingBottom="4dp"
+                        android:scaleType="centerInside"
+                        android:background="@null" />
+
+                    <!-- カメラボタン表示 -->
+                    <ImageButton
+                        android:id="@+id/search_map_sub_fragment_camera_button"
+                        android:src="@drawable/button_camera"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:paddingLeft="4dp"
+                        android:paddingRight="4dp"
+                        android:paddingTop="4dp"
+                        android:paddingBottom="4dp"
+                        android:scaleType="centerInside"
+                        android:background="@null" />
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+            <!-- メイン画面表示用レイアウト -->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="27">
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <!-- 更新ボタン表示 -->
+                    <ImageButton
+                        android:id="@+id/search_map_sub_fragment_update_button"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@null"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/button_renewal"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <!-- 吹き出し表示切替ボタン表示 -->
+                    <ImageButton
+                        android:id="@+id/search_map_sub_fragment_balloon_disp_button"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@null"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/button_baloon_disp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <!-- マップ視点リセットボタン表示 -->
+                    <ImageButton
+                        android:id="@+id/search_map_sub_fragment_my_location_button"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginBottom="30dp"
+                        android:layout_marginStart="10dp"
+                        android:background="@null"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/button_my_location"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                </android.support.constraint.ConstraintLayout>
+
+                <!-- お題スポット写真表示用レイアウト -->
+                <FrameLayout
+                    android:id="@+id/search_map_sub_fragment_theme_image_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <!-- お題スポット写真表示 -->
+                        <ImageView
+                            android:id="@+id/search_map_sub_fragment_theme_image"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:adjustViewBounds="true"
+                            android:scaleType="fitXY" />
+
+                        <!-- お題切り替えボタン表示 -->
+                        <Button
+                            android:id="@+id/search_map_sub_fragment_renewal_theme_button"
+                            android:layout_width="160dp"
+                            android:layout_height="50dp"
+                            android:background="@drawable/button0"
+                            android:text="お題リセット"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="18sp" />
+
+                    </LinearLayout>
+
+                </FrameLayout>
+
+                <!-- ヘッダ下部影表示 -->
+                <ImageView
+                    android:src="@drawable/ui_shader"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"/>
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</FrameLayout>

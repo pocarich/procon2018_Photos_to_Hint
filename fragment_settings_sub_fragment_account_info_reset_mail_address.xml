@@ -1,0 +1,212 @@
+﻿<!-- SettingsSubFragmentAccountInfoResetMailAddressレイアウトファイル -->
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="jp.androidbook.photostohint.SettingsSubFragmentAccountInfoResetMailAddress">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- ヘッダ表示用レイアウト -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3">
+
+            <!-- 背景表示 -->
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/ui_bar_back2" />
+
+            <!-- シーン名テキスト表示 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="メールアドレス変更"
+                android:textColor="@android:color/white"
+                android:textSize="24sp" />
+
+            <!-- 戻るボタン表示 -->
+            <ImageButton
+                android:id="@+id/settings_sub_fragment_account_info_reset_mail_address_back_button"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="4dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="4dp"
+                android:background="@null"
+                android:layout_gravity="left"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/back_button0" />
+
+        </FrameLayout>
+
+        <!-- メイン画面表示用レイアウト -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="27">
+
+            <LinearLayout
+                android:id="@+id/settings_sub_fragment_account_info_reset_mail_address_input_form_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp">
+
+                <!-- パスワードテキストボックス表示 -->
+                <EditText
+                    android:id="@+id/settings_sub_fragment_account_info_reset_mail_address_current_password_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:hint="パスワード"
+                    android:textColorHint="@color/hintColor"
+                    android:inputType="textPassword"
+                    android:textSize="20sp"
+                    android:maxLines="1"
+                    android:singleLine="true" />
+
+                <!-- 新しいメールアドレステキストボックス表示 -->
+                <EditText
+                    android:id="@+id/settings_sub_fragment_account_info_reset_mail_address_new_mail_address_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:hint="新しいメールアドレス"
+                    android:textColorHint="@color/hintColor"
+                    android:inputType="textEmailAddress"
+                    android:textSize="20sp"
+                    android:maxLines="1"
+                    android:singleLine="true" />
+
+                <!-- 確定ボタン表示 -->
+                <Button
+                    android:id="@+id/settings_sub_fragment_account_info_reset_mail_address_upload_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="15dp"
+                    android:text="変更"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="24sp"
+                    android:background="@drawable/button2"
+                    android:gravity="center"/>
+
+            </LinearLayout>
+
+            <!-- 通信画面表示用レイアウト -->
+            <FrameLayout
+                android:id="@+id/settings_sub_fragment_account_info_reset_mail_address_connection_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <!-- 通信中クルクル表示 -->
+                <ProgressBar
+                    style="@style/Base.Widget.AppCompat.ProgressBar"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"/>
+
+            </FrameLayout>
+
+            <!-- 通信失敗画面表示用レイアウト -->
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/settings_sub_fragment_account_info_reset_mail_address_connection_failure_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <!-- 通信再試行ボタン表示 -->
+                <Button
+                    android:id="@+id/settings_sub_fragment_account_info_reset_mail_address_connection_failure_button"
+                    android:layout_width="216dp"
+                    android:layout_height="74dp"
+                    android:layout_marginBottom="100dp"
+                    android:layout_marginEnd="50dp"
+                    android:layout_marginStart="50dp"
+                    android:background="@drawable/button0"
+                    android:text="再試行"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="24sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <!-- 通信失敗テキスト表示 -->
+                <TextView
+                    android:layout_width="277dp"
+                    android:layout_height="168dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="100dp"
+                    android:text="通信に失敗しました。"
+                    android:textAlignment="center"
+                    android:textSize="24sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </android.support.constraint.ConstraintLayout>
+
+            <!-- 変更完了確認画面表示用レイアウト -->
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/settings_sub_fragment_account_info_reset_mail_address_confirmation_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <!-- テキスト表示 -->
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="0dp"
+                    android:layout_height="138dp"
+                    android:layout_marginEnd="70dp"
+                    android:layout_marginStart="70dp"
+                    android:layout_marginTop="100dp"
+                    android:text="メールアドレスの変更が完了しました！"
+                    android:textAlignment="center"
+                    android:textSize="30sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <!-- 確認ボタン表示 -->
+                <Button
+                    android:id="@+id/settings_sub_fragment_account_info_reset_mail_address_confirmation_button"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginEnd="100dp"
+                    android:layout_marginStart="100dp"
+                    android:layout_marginTop="300dp"
+                    android:background="@drawable/button0"
+                    android:text="OK"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="24sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </android.support.constraint.ConstraintLayout>
+
+            <!-- ヘッダ下部影表示 -->
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/ui_shader" />
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

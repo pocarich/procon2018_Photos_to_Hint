@@ -1,0 +1,179 @@
+﻿<!-- TourismMapSubFragmentレイアウトファイル -->
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="jp.androidbook.photostohint.TourismMapSubFragment">
+
+    <!-- マップ表示用レイアウト -->
+    <FrameLayout
+        android:id="@+id/tourism_map_sub_fragment_frameLayout0"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/tourism_map_sub_fragment_frameLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!-- ヘッダ表示用レイアウト -->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3">
+
+                <!-- 背景表示 -->
+                <ImageView
+                    android:src="@drawable/ui_bar_back"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <FrameLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="4"
+                        android:layout_height="wrap_content">
+
+                        <!-- 地域名背景表示 -->
+                        <ImageView
+                            android:src="@drawable/map_region_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="fitXY"
+                            android:paddingLeft="4dp"
+                            android:paddingRight="4dp"
+                            android:paddingTop="4dp"
+                            android:paddingBottom="4dp"/>
+
+                        <!-- 地域名テキスト表示 -->
+                        <TextView
+                            android:id="@+id/tourism_map_sub_fragment_location_name_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="八戸市中心街"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="24sp" />
+
+                    </FrameLayout>
+
+                    <!-- スペース -->
+                    <android.support.v4.widget.Space
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"/>
+
+                    <!-- 口コミ投稿ボタン表示 -->
+                    <ImageButton
+                        android:id="@+id/tourism_map_sub_fragment_add_review_button"
+                        android:src="@drawable/button_add_review"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="4dp"
+                        android:paddingRight="4dp"
+                        android:paddingTop="4dp"
+                        android:paddingBottom="4dp"
+                        android:scaleType="centerInside"
+                        android:background="@null" />
+
+                    <!-- インフォメーションボタン表示 -->
+                    <ImageButton
+                        android:id="@+id/tourism_map_sub_fragment_openData_button"
+                        android:src="@drawable/button_opendata"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="4dp"
+                        android:paddingRight="4dp"
+                        android:paddingTop="4dp"
+                        android:paddingBottom="4dp"
+                        android:scaleType="centerInside"
+                        android:background="@null" />
+
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+            <!-- メイン画面表示用レイアウト -->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="27">
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <!-- 更新ボタン表示 -->
+                    <ImageButton
+                        android:id="@+id/tourism_map_sub_fragment_update_button"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@null"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/button_renewal"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <!-- 吹き出し表示切替ボタン表示 -->
+                    <ImageButton
+                        android:id="@+id/tourism_map_sub_fragment_balloon_disp_button"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@null"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/button_baloon_disp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <!-- マップ視点リセットボタン表示 -->
+                    <ImageButton
+                        android:id="@+id/tourism_map_sub_fragment_my_location_button"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginBottom="30dp"
+                        android:layout_marginStart="10dp"
+                        android:background="@null"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/button_my_location"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                </android.support.constraint.ConstraintLayout>
+
+                <!-- ヘッダ下部影表示 -->
+                <ImageView
+                    android:src="@drawable/ui_shader"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"/>
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</FrameLayout>

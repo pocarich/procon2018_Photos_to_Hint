@@ -1,0 +1,170 @@
+﻿<!-- SearchCameraSubFramgnet2レイアウトファイル -->
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="jp.androidbook.photostohint.SearchCameraSubFragment2">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- ヘッダ表示用レイアウト -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3">
+
+            <!-- 背景表示 -->
+            <ImageView
+                android:src="@drawable/ui_bar_back2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"/>
+
+            <!-- シーン名テキスト表示 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="スポット撮影"
+                android:textColor="@android:color/white"
+                android:textSize="24sp" />
+
+            <!-- 戻るボタン表示 -->
+            <ImageButton
+                android:id="@+id/search_camera_sub_fragment2_backButton"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="4dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="4dp"
+                android:background="@null"
+                android:layout_gravity="left"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/back_button0" />
+
+        </FrameLayout>
+
+        <!-- メイン画面表示用レイアウト -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="27">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal">
+
+                    <!-- テキスト表示 -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:gravity="center"
+                        android:textSize="24sp"
+                        android:text="お題" />
+
+                    <!-- お題スポット写真表示 -->
+                    <ImageView
+                        android:id="@+id/search_camera_sub_fragment2_theme_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitXY" />
+
+                    <!-- 境界線表示 -->
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:src="@drawable/ui_underline"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:scaleType="fitXY"/>
+
+                    <!-- 撮影写真表示 -->
+                    <ImageView
+                        android:id="@+id/search_camera_sub_fragment2_takenImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitXY" />
+
+                    <!-- テキスト表示 -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="50dp"
+                        android:layout_marginStart="50dp"
+                        android:layout_marginTop="20dp"
+                        android:gravity="center"
+                        android:text="この写真で答え合わせをしますか？"
+                        android:textSize="24sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="20dp"
+                        android:paddingBottom="20dp"
+                        android:orientation="horizontal">
+
+                        <!-- キャンセルボタン表示 -->
+                        <Button
+                            android:id="@+id/search_camera_sub_fragment2_no_button"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_weight="1"
+                            android:layout_marginEnd="30dp"
+                            android:layout_marginStart="30dp"
+                            android:background="@drawable/button1"
+                            android:text="いいえ"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="24sp" />
+
+                        <!-- 決定ボタン表示 -->
+                        <Button
+                            android:id="@+id/search_camera_sub_fragment2_yes_button"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_weight="1"
+                            android:layout_marginEnd="30dp"
+                            android:layout_marginStart="30dp"
+                            android:background="@drawable/button0"
+                            android:text="はい"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="24sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </ScrollView>
+
+            <!-- ヘッダ下部影表示 -->
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/ui_shader" />
+
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

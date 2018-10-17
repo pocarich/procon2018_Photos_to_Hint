@@ -1,0 +1,127 @@
+﻿<!-- SearchCameraSubFramgnet4レイアウトファイル -->
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="jp.androidbook.photostohint.SearchCameraSubFragment4">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        
+        <!-- ヘッダ表示用レイアウト -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3">
+
+            <!-- 背景表示 -->
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/ui_bar_back2" />
+
+            <!-- シーン名テキスト表示 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="スポット撮影"
+                android:textColor="@android:color/white"
+                android:textSize="24sp" />
+
+        </FrameLayout>
+
+        <!-- メイン画面表示用レイアウト -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="27">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal">
+
+                    <!-- お題スポット名テキスト表示 -->
+                    <TextView
+                        android:id="@+id/search_camera_sub_fragment4_title_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:gravity="center"
+                        android:textSize="24sp"
+                        android:textStyle="bold"/>
+
+                    <!-- お題スポット写真表示 -->
+                    <ImageView
+                        android:id="@+id/search_camera_sub_fragment4_takenImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/test_theme_spot"
+                        android:scaleType="fitXY" />
+
+                    <!-- お題スポット説明テキスト表示 -->
+                    <TextView
+                        android:id="@+id/search_camera_sub_fragment4_tip_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:textSize="18sp" />
+
+                    <!-- コメントテキストボックス表示 -->
+                    <EditText
+                        android:id="@+id/search_camera_sub_fragment4_message_editText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:hint="コメント入力（～16文字）"
+                        android:textSize="16sp"
+                        android:textColorHint="@color/colorGray"/>
+
+                    <!-- 決定ボタン表示 -->
+                    <Button
+                        android:id="@+id/search_camera_sub_fragment4_publish_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="100dp"
+                        android:layout_marginLeft="100dp"
+                        android:background="@drawable/button0"
+                        android:text="OK"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="24sp" />
+
+                </LinearLayout>
+
+            </ScrollView>
+
+            <!-- ヘッダ下部影表示 -->
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/ui_shader" />
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

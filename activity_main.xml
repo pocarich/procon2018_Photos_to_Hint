@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<!-- MainActivityレイアウトファイル -->
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="jp.androidbook.photostohint.MainActivity">
+
+    
+    <!-- メイン画面表示用レイアウト -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- メインコンテンツ表示用レイアウト -->
+        <FrameLayout
+            android:id="@+id/mainActivityFrameLayout0"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="20">
+
+        </FrameLayout>
+
+        <!-- メニューバー表示用レイアウト -->
+        <FrameLayout
+            android:id="@+id/mainActivityFrameLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2">
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <!-- ログイン画面用レイアウト -->
+    <FrameLayout
+        android:id="@+id/login_frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </FrameLayout>
+
+    <!-- 通信中画面表示用レイアウト -->
+    <FrameLayout
+        android:id="@+id/main_activity_connection_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- 通信中クルクル表示 -->
+        <ProgressBar
+            style="@style/Base.Widget.AppCompat.ProgressBar"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"/>
+
+    </FrameLayout>
+    
+    <!-- 通信失敗画面表示用レイアウト -->
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/main_activity_connection_failure_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- 通信失敗テキスト -->
+        <TextView
+            android:layout_width="277dp"
+            android:layout_height="168dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="130dp"
+            android:text="通信に失敗しました。"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- 通信再試行ボタン -->
+        <Button
+            android:id="@+id/main_activity_connection_failure_button"
+            android:layout_width="216dp"
+            android:layout_height="74dp"
+            android:layout_marginBottom="130dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginStart="50dp"
+            android:background="@drawable/button0"
+            android:text="再試行"
+            android:textColor="@color/colorWhite"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <!-- タイトル画面表示用レイアウト -->
+    <FrameLayout
+        android:id="@+id/title_frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </FrameLayout>
+
+    <!-- 歩きスマホ警告表示用レイアウト -->
+    <FrameLayout
+        android:id="@+id/caution_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- 白背景 -->
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@color/colorWhite"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center">
+
+            <!-- 警告画像表示 -->
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:scaleType="fitXY"
+                android:adjustViewBounds="true"
+                android:src="@drawable/caution"
+                android:layout_gravity="center_horizontal"/>
+
+            <!-- 警告テキスト表示 -->
+            <TextView
+                android:id="@+id/caution_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="50dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:text="歩きスマホを\n検知しています"
+                android:textSize="28sp"/>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</FrameLayout>

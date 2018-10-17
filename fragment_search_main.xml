@@ -1,0 +1,70 @@
+﻿<!-- SearchMainFragmentレイアウトファイル -->
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="jp.androidbook.photostohint.SearchMainFragment">
+
+    <!-- 探索画面表示用レイアウト -->
+    <FrameLayout
+        android:id="@+id/search_main_fragment_fragment_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </FrameLayout>
+
+    <!-- 通信画面表示用レイアウト -->
+    <FrameLayout
+        android:id="@+id/search_main_fragment_fragment_download_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- 通信中クルクル表示 -->
+        <ProgressBar
+            style="@style/Base.Widget.AppCompat.ProgressBar"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"/>
+
+    </FrameLayout>
+
+    <!-- 通信失敗画面表示用レイアウト -->
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/search_main_fragment_connection_failure_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- 通信再試行ボタン表示 -->
+        <Button
+            android:id="@+id/search_main_fragment_connection_failure_button"
+            android:layout_width="216dp"
+            android:layout_height="74dp"
+            android:layout_marginBottom="100dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginStart="50dp"
+            android:background="@drawable/button0"
+            android:text="再試行"
+            android:textColor="@color/colorWhite"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <!-- 通信失敗テキスト表示 -->
+        <TextView
+            android:layout_width="277dp"
+            android:layout_height="168dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="100dp"
+            android:text="通信に失敗しました。"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </android.support.constraint.ConstraintLayout>
+
+</FrameLayout>

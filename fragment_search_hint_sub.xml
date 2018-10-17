@@ -1,0 +1,236 @@
+﻿<!-- SearchHintSubFramgnetレイアウトファイル -->
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="jp.androidbook.photostohint.SearchHintSubFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- ヘッダ表示用レイアウト -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3">
+
+            <!-- 背景表示 -->
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/ui_bar_back2" />
+
+            <!-- シーン名テキスト表示 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="ヒント"
+                android:textColor="@android:color/white"
+                android:textSize="24sp" />
+
+            <!-- 戻るボタン表示 -->
+            <ImageButton
+                android:id="@+id/search_hint_sub_fragment_backButton"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="4dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="4dp"
+                android:background="@null"
+                android:layout_gravity="left"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/back_button0" />
+
+        </FrameLayout>
+
+        <!-- メイン画面表示用レイアウト -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="27">
+
+            <!-- 通信画面表示用レイアウト -->
+            <FrameLayout
+                android:id="@+id/search_hint_sub_fragment_download_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <!-- 通信中クルクル表示 -->
+                <ProgressBar
+                    style="@style/Base.Widget.AppCompat.ProgressBar"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"/>
+
+            </FrameLayout>
+
+            <!-- 通信失敗画面表示用レイアウト -->
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/search_hint_sub_fragment_connection_failure_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <!-- 通信再試行ボタン表示 -->
+                <Button
+                    android:id="@+id/search_hint_sub_fragment_connection_failure_button"
+                    android:layout_width="216dp"
+                    android:layout_height="74dp"
+                    android:layout_marginBottom="100dp"
+                    android:layout_marginEnd="50dp"
+                    android:layout_marginStart="50dp"
+                    android:background="@drawable/button0"
+                    android:text="再試行"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="24sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <!-- 通信失敗テキスト表示 -->
+                <TextView
+                    android:layout_width="277dp"
+                    android:layout_height="168dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="100dp"
+                    android:text="通信に失敗しました。"
+                    android:textAlignment="center"
+                    android:textSize="24sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </android.support.constraint.ConstraintLayout>
+
+            <!-- メインコンテンツ画面表示用レイアウト -->
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/search_hint_sub_fragment_hint_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <!-- テキスト表示 -->
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="ヒントポイントを支払うことでヒントレベルを上げることができます。\n\nヒントレベルを上げるとヒント円の範囲が狭まります。"
+                    android:textSize="20sp"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <!-- 境界線表示 -->
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ui_underline"
+                    app:layout_constraintTop_toBottomOf="@+id/textView"/>
+
+                <RadioGroup
+                    android:id="@+id/search_hint_sub_fragment_radio_group"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:paddingTop="60dp"
+                    app:layout_constraintTop_toBottomOf="@+id/textView">
+
+                    <!-- ヒントレベル1ボタン表示 -->
+                    <RadioButton
+                        android:id="@+id/search_hint_sub_fragment_radio_button0"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:button="@null"
+                        android:drawableRight="@android:drawable/btn_radio"
+                        android:text="ヒントレベル1"
+                        android:textSize="24sp" />
+
+                    <!-- ヒントレベル2ボタン表示 -->
+                    <RadioButton
+                        android:id="@+id/search_hint_sub_fragment_radio_button1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:button="@null"
+                        android:drawableRight="@android:drawable/btn_radio"
+                        android:text="ヒントレベル2"
+                        android:textSize="24sp" />
+ 
+                    <!-- ヒントレベル3ボタン表示 -->
+                    <RadioButton
+                        android:id="@+id/search_hint_sub_fragment_radio_button2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:button="@null"
+                        android:drawableRight="@android:drawable/btn_radio"
+                        android:text="ヒントレベル3"
+                        android:textSize="24sp" />
+
+                </RadioGroup>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="20dp"
+                    app:layout_constraintBottom_toBottomOf="parent">
+
+                    <!-- 境界線表示 -->
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ui_underline" />
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp">
+
+                        <!-- テキスト表示 -->
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="所持ヒントポイント："
+                            android:textSize="24sp" />
+
+                        <!-- ヒントポイント表示 -->
+                        <TextView
+                            android:id="@+id/search_hint_sub_fragment_hint_point_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="right"
+                            android:textSize="24sp" />
+                    </FrameLayout>
+
+                </LinearLayout>
+
+            </android.support.constraint.ConstraintLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/ui_shader" />
+
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+
+</FrameLayout>

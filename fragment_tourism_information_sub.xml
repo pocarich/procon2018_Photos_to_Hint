@@ -1,0 +1,159 @@
+﻿<!-- TourismInformationSubFragmentレイアウトファイル -->
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="jp.androidbook.photostohint.TourismInformationSubFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- ヘッダ表示用レイアウト -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3">
+
+            <!-- 背景表示 -->
+            <ImageView
+                android:src="@drawable/ui_bar_back2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"/>
+
+            <!-- シーン名テキスト表示 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="インフォメーション"
+                android:textColor="@android:color/white"
+                android:textSize="24sp" />
+
+            <!-- 戻るボタン表示 -->
+            <ImageButton
+                android:id="@+id/tourism_open_data_sub_fragment_backButton"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="4dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="4dp"
+                android:background="@null"
+                android:layout_gravity="left"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/back_button0" />
+
+            <!-- 更新ボタン表示 -->
+            <ImageButton
+                android:id="@+id/tourism_open_data_sub_fragment_updateButton"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="4dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginTop="4dp"
+                android:background="@null"
+                android:layout_gravity="right"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/button_renewal" />
+
+        </FrameLayout>
+
+        <!-- メイン画面表示用レイアウト -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="27">
+
+            <!-- コンテンツリスト表示用レイアウト -->
+            <FrameLayout
+                android:id="@+id/tourism_open_data_sub_fragment_main_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <!-- コンテンツリスト表示 -->
+                    <LinearLayout
+                        android:id="@+id/tourism_open_data_sub_fragment_linearLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                    </LinearLayout>
+
+                </ScrollView>
+
+            </FrameLayout>
+
+            <!-- 通信画面表示用レイアウト -->
+            <FrameLayout
+                android:id="@+id/tourism_open_data_sub_fragment_connection_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <!-- 通信中クルクル表示 -->
+                <ProgressBar
+                    style="@style/Base.Widget.AppCompat.ProgressBar"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"/>
+
+            </FrameLayout>
+
+            <!-- 通信失敗画面表示用レイアウト -->
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/tourism_open_data_sub_fragment_connection_failure_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <!-- 通信再試行ボタン表示 -->
+                <Button
+                    android:id="@+id/tourism_open_data_sub_fragment_connection_failure_button"
+                    android:layout_width="216dp"
+                    android:layout_height="74dp"
+                    android:layout_marginBottom="100dp"
+                    android:layout_marginEnd="50dp"
+                    android:layout_marginStart="50dp"
+                    android:background="@drawable/button0"
+                    android:text="再試行"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="24sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <!-- 通信失敗テキスト表示 -->
+                <TextView
+                    android:layout_width="277dp"
+                    android:layout_height="168dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="100dp"
+                    android:text="通信に失敗しました。"
+                    android:textAlignment="center"
+                    android:textSize="24sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </android.support.constraint.ConstraintLayout>
+
+            <!-- ヘッダ下部影表示 -->
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/ui_shader" />
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

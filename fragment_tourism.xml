@@ -1,0 +1,17 @@
+﻿<!-- TourismMainFragmentレイアウトファイル -->
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="jp.androidbook.photostohint.TourismMainFragment">
+
+    <!-- 観光画面表示用レイアウト -->
+    <FrameLayout
+        android:id="@+id/tourismFragmentFrameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </FrameLayout>
+
+</FrameLayout>

@@ -1,0 +1,55 @@
+﻿<!-- 吹き出し詳細ウィンドウレイアウトファイル2 -->
+
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 背景表示用レイアウト -->
+    <FrameLayout
+        android:layout_width="300dp"
+        android:layout_height="300dp">
+
+        <!-- 背景表示 -->
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/balloon_window_back4"
+            android:scaleType="fitXY"/>
+    </FrameLayout>
+
+    <!-- メインコンテンツ表示用レイアウト -->
+    <FrameLayout
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:paddingBottom="15dp"
+        android:paddingTop="15dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!-- 画像表示 -->
+            <ImageView
+                android:id="@+id/tourism_map_info_window2_image"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:scaleType="fitXY"/>
+
+            <!-- メッセージ表示 -->
+            <TextView
+                android:id="@+id/tourism_map_info_window2_description"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:paddingTop="4dp"
+                android:paddingRight="5dp"
+                android:paddingLeft="5dp"
+                android:textSize="16sp"/>
+
+        </LinearLayout>
+    </FrameLayout>
+
+</FrameLayout>

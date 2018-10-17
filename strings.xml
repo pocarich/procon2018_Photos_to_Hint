@@ -1,0 +1,8 @@
+﻿<!-- 文字列データ -->
+
+<resources>
+
+    <!-- アプリ名 -->
+    <string name="app_name">PhotosToHint</string>
+
+</resources>

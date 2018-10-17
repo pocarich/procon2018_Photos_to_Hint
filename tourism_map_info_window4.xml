@@ -1,0 +1,46 @@
+﻿<!-- 吹き出し詳細ウィンドウレイアウトファイル4 -->
+
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 背景表示用レイアウト -->
+    <FrameLayout
+        android:layout_width="300dp"
+        android:layout_height="120dp">
+
+        <!-- 背景表示 -->
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/balloon_window_back"
+            android:scaleType="fitXY"/>
+    </FrameLayout>
+
+    <!-- メインコンテンツ表示用レイアウト -->
+    <FrameLayout
+        android:layout_width="300dp"
+        android:layout_height="120dp"
+        android:paddingBottom="15dp"
+        android:paddingTop="15dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!-- メッセージテキスト表示 -->
+            <TextView
+                android:id="@+id/tourism_map_info_window4_description"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="あいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえお"
+                android:textSize="16sp"/>
+
+        </LinearLayout>
+    </FrameLayout>
+
+</FrameLayout>

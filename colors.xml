@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<!-- 色データ -->
+
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorBlue">#0000FF</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorOrange">#FFA500</color>
+    <color name="colorGreen">#00FF00</color>
+    <color name="colorGray">#646464</color>
+    <color name="colorTransParentRed">#50FFC0CB</color>
+    <color name="colorTransParentBlue">#1087CEEB</color>
+
+    <!-- ヒント円色 -->
+    <color name="hintColor">#A0646464</color>
+</resources>

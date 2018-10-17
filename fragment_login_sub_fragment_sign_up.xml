@@ -1,0 +1,243 @@
+﻿<!-- LoginSubFragmentSignUpレイアウトファイル -->
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="jp.androidbook.photostohint.LoginSubFragmentSignUp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- ヘッダ表示用レイアウト -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3">
+
+            <!-- 背景表示 -->
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/ui_bar_back2" />
+
+            <!-- モード名テキスト表示 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="新規登録"
+                android:textColor="@android:color/white"
+                android:textSize="24sp" />
+
+            <!-- 戻るボタン表示 -->
+            <ImageButton
+                android:id="@+id/login_sub_fragment_sign_up_backButton"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="4dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="4dp"
+                android:background="@null"
+                android:layout_gravity="left"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/back_button0" />
+
+        </FrameLayout>
+
+        <!-- メイン画面表示用レイアウト -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="30">
+
+            <ScrollView
+                android:id="@+id/login_sub_fragment_sign_up_form_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <!-- ID入力テキストボックス表示 -->
+                    <EditText
+                        android:id="@+id/login_sub_fragment_sign_up_id_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginRight="24dp"
+                        android:hint="ID入力"
+                        android:textColorHint="@color/hintColor"
+                        android:textSize="20sp"
+                        android:maxLines="1"
+                        android:singleLine="true" />
+
+                    <!-- パスワード入力テキストボックス表示 -->
+                    <EditText
+                        android:id="@+id/login_sub_fragment_sign_up_passwrord_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginRight="24dp"
+                        android:hint="パスワード入力(8～30文字)"
+                        android:inputType="textPassword"
+                        android:textColorHint="@color/hintColor"
+                        android:textSize="20sp"
+                        android:maxLines="1"
+                        android:singleLine="true" />
+
+                    <!-- パスワード再確認入力テキストボックス表示 -->
+                    <EditText
+                        android:id="@+id/login_sub_fragment_sign_up_password_repeated_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginRight="24dp"
+                        android:hint="パスワード再入力"
+                        android:textColorHint="@color/hintColor"
+                        android:inputType="textPassword"
+                        android:textSize="20sp"
+                        android:maxLines="1"
+                        android:singleLine="true" />
+
+                    <!-- メールアドレス入力テキストボックス表示 -->
+                    <EditText
+                        android:id="@+id/login_sub_fragment_sign_up_mail_address_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginRight="24dp"
+                        android:hint="メールアドレス"
+                        android:textColorHint="@color/hintColor"
+                        android:inputType="textEmailAddress"
+                        android:textSize="20sp"
+                        android:maxLines="1"
+                        android:singleLine="true" />
+
+                    <!-- 登録ボタン表示 -->
+                    <Button
+                        android:id="@+id/login_sub_fragment_sign_up_register_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:text="登録"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="24sp"
+                        android:background="@drawable/button2" />
+
+                </LinearLayout>
+            </ScrollView>
+
+            <!-- 通信画面表示用レイアウト -->
+            <FrameLayout
+                android:id="@+id/login_sub_fragment_sign_up_connection_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <!-- 通信中クルクル表示 -->
+                <ProgressBar
+                    style="@style/Base.Widget.AppCompat.ProgressBar"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"/>
+
+            </FrameLayout>
+
+            <!-- 通信失敗画面表示用レイアウト -->
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/login_sub_fragment_sign_up_connection_failure_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <!-- 通信再試行ボタン表示 -->
+                <Button
+                    android:id="@+id/login_sub_fragment_sign_up_connection_failure_button"
+                    android:layout_width="216dp"
+                    android:layout_height="74dp"
+                    android:layout_marginBottom="100dp"
+                    android:layout_marginEnd="50dp"
+                    android:layout_marginStart="50dp"
+                    android:background="@drawable/button0"
+                    android:text="再試行"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="24sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <!-- 通信失敗テキスト表示 -->
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="277dp"
+                    android:layout_height="168dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="100dp"
+                    android:text="通信に失敗しました。"
+                    android:textAlignment="center"
+                    android:textSize="24sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </android.support.constraint.ConstraintLayout>
+
+            <!-- 登録完了確認画面表示用レイアウト -->
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/login_sub_fragment_sign_up_confirmation_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <!-- 登録完了テキスト表示 -->
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="0dp"
+                    android:layout_height="138dp"
+                    android:layout_marginEnd="70dp"
+                    android:layout_marginStart="70dp"
+                    android:layout_marginTop="120dp"
+                    android:text="新規登録が完了しました！"
+                    android:textAlignment="center"
+                    android:textSize="30sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <!-- 登録完了確認ボタン表示 -->
+                <Button
+                    android:id="@+id/login_sub_fragment_sign_up_confirmation_button"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginBottom="120dp"
+                    android:layout_marginEnd="100dp"
+                    android:layout_marginStart="100dp"
+                    android:background="@drawable/button0"
+                    android:text="OK"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="24sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+            </android.support.constraint.ConstraintLayout>
+
+            <!-- ヘッダ下部影表示 -->
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/ui_shader" />
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

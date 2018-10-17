@@ -1,0 +1,17 @@
+﻿<!-- SettingsMainFragmentレイアウトファイル -->
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="jp.androidbook.photostohint.SettingsMainFragment">
+
+    <!-- 設定画面表示用レイアウト -->
+    <FrameLayout
+        android:id="@+id/settings_main_fragment_fragment_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </FrameLayout>
+
+</FrameLayout>
