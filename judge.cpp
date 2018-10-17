@@ -44,7 +44,7 @@ void featuresMatching(const string filePath1,const string filePath2)
 	Mat img2 = imread(filePath2);
 	Mat out;
 
-        //ファイルが存在進ければ"不正解"終了
+        //ファイルが存在しなければ"不正解"終了
 	if (!img1.data || !img2.data)
 	{
 		cout<<"0"<<endl;
@@ -59,7 +59,7 @@ void featuresMatching(const string filePath1,const string filePath2)
 	img1 = myEqualizeHist(img1);
 	img2 = myEqualizeHist(img2);
 
-	//グレイスケール
+	//RGBからグレイスケールに変換
 	cvtColor(img1, img1, CV_BGR2GRAY);
 	cvtColor(img2, img2, CV_BGR2GRAY);
 
